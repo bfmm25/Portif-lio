@@ -1,0 +1,1349 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --fundo: #0f111a;
+    --fundoCorpo: #090B17;
+    --cartao: #1a1d2e;
+    --cartaoSecundario: #161926;
+    --texto: #e2e8f0;
+    --textoPrincipal: #ffffff;
+    --textoSecundario: #94a3b8;
+    --primaria: #7c3aed;
+    --primariaHover: #6d28d9;
+    --borda: #2e344e;
+    --bordaClara: #575f88;
+    --bordaInput: #5a5c74;
+    --codigoFundo: #011627;
+    --botaoFundo: rgba(255, 255, 255, 0.18);
+    --botaoHover: rgba(255, 255, 255, 0.1);
+    --dropdownFundo: rgba(170, 174, 201, 0.26);
+    --dropdownBorda: rgba(255, 255, 255, 0.411);
+    --tagFundo: #5b617c50;
+    --tagBorda: #b4b8c7a9;
+    --inputFundo: transparent;
+    --contatoDireto: #131420;
+    --contatoHover: #1a1b2b;
+    --destaqueAno: #4149c2;
+    --divisor: #272840;
+    --contatoFundo: linear-gradient(180deg, rgba(41, 43, 55, 0.25) 0%, rgba(56, 60, 83, 0.25) 100%);
+    --imgTema: url(Imagens/sun.png);
+
+}
+
+
+html.light {
+    --fundo: #ecf0f7;
+    --fundoCorpo: #c4d3e9;
+    --cartao: #ffffff;
+    --cartaoSecundario: #f0f2f5;
+    --texto: #334155;
+    --textoPrincipal: #0f172a;
+    --textoSecundario: #64748b;
+    --primaria: #7c3aed;
+    --primariaHover: #6d28d9;
+    --borda: #cbd5e1;
+    --bordaClara: #94a3b8;
+    --bordaInput: #cbd5e1;
+    --codigoFundo: #f1f5f9;
+    --botaoFundo: rgba(0, 0, 0, 0.05);
+    --botaoHover: rgba(0, 0, 0, 0.1);
+    --dropdownFundo: #ffffff;
+    --dropdownBorda: #cbd5e1;
+    --tagFundo: #e2e8f0;
+    --tagBorda: #cbd5e1;
+    --inputFundo: transparent;
+    --contatoDireto: #f8fafc;
+    --contatoHover: #f1f5f9;
+    --destaqueAno: #4f46e5;
+    --divisor: #e2e8f0;
+    --contatoFundo: linear-gradient(180deg, rgba(140, 156, 250, 0.596) 0%, rgba(138, 190, 238, 0.726) 100%);
+    --imgTema: url(Imagens/moon.png);
+}
+
+
+body, .cartaoExp, .itemSkill, .cartaoProjeto, .inputs, .btnContato, .dropdownmenu {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+
+@media screen and (max-width: 510px) {
+    html {
+    }
+
+
+    body {
+        color: var(--textoPrincipal);
+        margin: 7%;
+        background-color: var(--fundoCorpo);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Inter', sans-serif;
+        justify-content: center;
+    }
+
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-self: normal;
+    }
+
+
+    #btnLight {
+        width: 5vh;
+        height: 5vh;
+        background: var(--botaoFundo);
+        border: 1px solid var(--bordaClara);
+        border-radius: 53px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .img-btnLigth{
+        background-image: var(--imgTema);
+        width: 3vh;
+        background-size: cover;
+        height: 3vh;
+    }
+
+
+    .perfil {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        margin-top: 20%;
+    }
+
+
+    .perfilFoto{
+        width: 15vh;
+        height: 15vh;
+        background-color: #8c8c8c;
+        border-radius: 50%;
+        margin-bottom: 30px;
+        background-image: url(Imagens/img10.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+
+    .mensagemTexto {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--textoPrincipal);
+        margin-bottom: 10px;
+    }
+
+
+    .nome {
+        display: flex;
+        flex-direction: column;
+        font-size: 2.8rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 25px;
+    }
+
+
+    .primeiroNome {
+        background: linear-gradient(45deg, #2b57ff, #a04ef6);
+        -webkit-background-clip: text;
+        font-size: 3.5rem;
+        -webkit-text-fill-color: transparent;
+    }
+
+
+    .ultimoNome {
+        color: var(--textoPrincipal);
+    }
+
+
+    .github {
+        height: 5vh;
+        width: 5vh;
+        background: var(--botaoFundo);
+        border: 1px solid var(--bordaClara);
+        border-radius: 53px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 3vh;
+            height: 3vh;
+        }
+    }
+
+
+    .github:hover {
+        background-color: var(--botaoHover);
+        transform: scale(1.05);
+    }
+
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+
+    .dropdownbtn {
+        width: 5vh;
+        height: 5vh;
+        background: var(--botaoFundo);
+        border: 1px solid var(--bordaClara);
+        border-radius: 53px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        transition: all 0.3s ease;
+        img {
+            width: 3vh;
+            height: 3vh;
+        }
+    }
+
+
+    .dropdownbtn:hover {
+        background-color: rgba(168, 85, 247, 0.1);
+        border-color: #717fff;
+    }
+
+
+    .dropdownmenu {
+        position: absolute;
+        top: calc(100% + 8px);
+        right: 0;
+        min-width: 160px;
+        background-color: var(--dropdownFundo);
+        border: 2px solid var(--dropdownBorda);
+        border-radius: 12px;
+        list-style: none;
+        padding: 6px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(8px);
+        transition: all 0.3s ease;
+        z-index: 100;
+    }
+
+
+    .dropdownmenu li a {
+        display: block;
+        padding: 10px 14px;
+        color: var(--textoPrincipal);
+        text-decoration: none;
+        font-size: 0.9rem;
+        border-radius: 8px;
+        transition: all 0.2s ease;
+    }
+
+
+    .dropdownmenu li a:hover {
+        background-color: var(--botaoHover);
+    }
+
+
+    .dropdown:hover .dropdownmenu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+
+    .dropdown:hover .arrow {
+        transform: rotate(180deg);
+    }
+
+
+    #sobremim {
+        width: 100%;
+        display: flex;
+        background-color: var(--cartaoSecundario);
+        margin-top: 70%;
+        border-radius: 30px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+        padding: 7%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    #um {
+        background: linear-gradient(45deg, #2b57ff, #a04ef6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+
+    .codigo {
+        width: 100%;
+        background-color: var(--codigoFundo);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+        margin-top: 20%;
+        margin-bottom: 20%;
+        padding: 14px 18px;
+        color: var(--textoSecundario);
+        line-height: 1.5rem;
+    }
+
+
+    #bolinhas {
+        display: flex;
+        gap: 6px;
+        margin-bottom: 10px;
+    }
+
+
+    .bolinha {
+        width: 1.5vh;
+        height: 1.5vh;
+        border-radius: 50%;
+        margin-bottom: 2vh;
+    }
+    #ver { background: #ff5f56; }
+    #ama { background: #ffbd2e; }
+    #ved { background: #27c93f; }
+
+
+    .roxo { color: #986fc5; }
+    .azul { color: #8495e0; }
+    .amarelo { color: #c5aa6f; }
+
+
+    hr {
+        width: 100%;
+        margin-top: 1vh;
+        background: #100cff;
+        border: none;
+        height: 1px;
+    }
+
+
+    .divExp {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+
+
+    .gradeExp {
+        width: 100%;
+        margin-top: 15%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+
+    .cartaoExp {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--cartaoSecundario);
+        border: 1px solid var(--bordaClara);
+        border-radius: 8px;
+        padding: 2.7vh;
+    }
+
+
+    .ano {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--destaqueAno);
+    }
+
+
+    .status {
+        font-size: 0.75rem;
+        background-color: var(--tagFundo);
+        border: solid 1px var(--tagBorda);
+        padding: 0.4vh 0.8vh;
+        border-radius: 4px;
+        margin: 1vh 0 1.5vh 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: var(--textoPrincipal);
+    }
+
+
+    .lista li {
+        font-size: 0.9rem;
+        color: var(--textoPrincipal);
+        margin-bottom: 1vh;
+        b { color: var(--destaqueAno); }
+    }
+
+
+    #skills {
+        margin-top: 10%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+
+    .habili {
+        color: #100cff;
+        margin-top: 2vh;
+        margin-bottom: 3vh;
+        font-size: 25px;
+    }
+    .soft {
+        color: #100cff;
+        margin-top: 2vh;
+        margin-bottom: 3vh;
+        font-size: 25px;
+    }
+
+
+    .divSkills {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+
+    .gradeSkills {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+
+    .itemSkill {
+        border-radius: 8px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 10px;
+        img {
+            width: 40%;
+            height: 40%;
+        }
+        span {
+            color: #7e7ae6;
+            font-weight: 700;
+            margin-top: 1vh;
+        }
+    }
+
+
+    .itemSoftskill {
+        background-color: var(--cartaoSecundario);
+        border: 1px solid var(--borda);
+        padding: 15px 20px;
+        border-radius: 8px;
+        margin-bottom: 12px;
+        color: var(--textoPrincipal);
+    }
+
+
+    .projetos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .listaSoft {
+        margin-bottom: 20%;
+    }
+
+
+    .gradeProjetos {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin-top: 20%;
+    }
+
+
+    .cartaoProjeto {
+        background-color: var(--cartaoSecundario);
+        border: 1px solid var(--borda);
+        border-radius: 8px;
+        overflow: hidden;
+        padding: 20px;
+        color: var(--textoPrincipal);
+    }
+
+
+    .capaProjeto {
+        height: 17.5vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+
+    .capaEchobeats { background-image: url(Imagens/image\ 1.png); background-size: cover; }
+    .capaEcocirc { background-image: url(Imagens/image\ 2.png); background-size: cover; }
+    .capaPortfolio { background-image: url(Imagens/image\ 3.png); background-size: cover; }
+                   
+    .descProjeto {
+        padding-top: 20px;
+    }
+
+
+    .descProjeto h4 {
+        margin-bottom: 10px;
+        color: var(--textoPrincipal);
+    }
+
+
+    .descProjeto p {
+        font-size: 0.85rem;
+        color: var(--textoSecundario);
+    }
+
+
+    #contato {
+        display: flex;
+        width: 100%;
+    }
+
+
+    .contato {
+        background: var(--contatoFundo);
+        padding: 3vh 2vh;
+        border-radius: 20px;
+        color: var(--textoPrincipal);
+        margin-top: 20%;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .formCartao {
+        border: 1px solid var(--bordaClara);
+        border-radius: 16px;
+        padding: 1.6vh;
+        margin-top: 10%;
+        background-color: transparent;
+        width: 100%;
+    }
+
+
+    .formContato {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2vh;
+    }
+
+
+    .inputs {
+        background: linear-gradient(180deg, rgba(41, 43, 55, 0.25) 0%, rgba(56, 60, 83, 0.25) 100%);
+        border: 1px solid var(--bordaInput);
+        border-radius: 10px;
+        padding: 1vh 1.4vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .inputs label {
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: var(--textoPrincipal);
+        margin-bottom: 4px;
+    }
+
+
+    .inputs input,
+    .inputs textarea {
+        background: var(--inputFundo);
+        border: none;
+        outline: none;
+        color: var(--textoPrincipal);
+        font-size: 0.95rem;
+        width: 100%;
+        resize: none;
+    }
+
+
+    .btnEnviar {
+        background-color: #f0f0f0;
+        color: #111111;
+        border: none;
+        border-radius: 25px;
+        padding: 1.2vh;
+        font-size: 1.05rem;
+        font-weight: 800;
+        cursor: pointer;
+        margin-top: 5px;
+        transition: background-color 0.2s ease;
+    }
+
+
+    .btnEnviar:hover {
+        background-color: #ffffff;
+    }
+
+
+    .ou {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+
+    .ou::before,
+    .ou::after {
+        content: '';
+        border-bottom: 1px solid var(--divisor);
+    }
+
+
+    .ou span {
+        padding: 0 12px;
+        color: var(--textoSecundario);
+        font-size: 0.85rem;
+        font-weight: 600;
+    }
+
+
+    .listaContato {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+
+    .btnContato {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        background-color: var(--contatoDireto);
+        border: 1px solid var(--divisor);
+        border-radius: 30px;
+        padding: 12px 16px;
+        color: var(--textoPrincipal);
+        text-decoration: none;
+        transition: border-color 0.2s ease, background-color 0.2s ease;
+    }
+
+
+    .btnContato:hover {
+        border-color: #5b51d8;
+        background-color: var(--contatoHover);
+    }
+
+
+
+
+    .btnContato .txtContato {
+        font-size: 0.85rem;
+        font-weight: 700;
+    }
+
+    .listaMenu{ display: none;}
+    .btnCurriculo{display: none;}
+    .ladoDir{display: none;}
+}
+
+
+@media screen and (min-width: 511px) {
+
+
+    body {
+        color: var(--textoPrincipal);
+        margin: 7%;
+        padding-left: 15%;
+        padding-right: 15%;
+        background-color: var(--fundoCorpo);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Inter', sans-serif;
+    }
+
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-self: normal;
+    }
+
+
+    #btnLight {
+        width: 5vh;
+        height: 5vh;
+        background: var(--botaoFundo);
+        border: 1px solid var(--bordaClara);
+        border-radius: 53px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .img-btnLigth{
+        background-image: var(--imgTema);
+        width: 3vh;
+        background-size: cover;
+        height: 3vh;
+    }
+
+
+    .perfil {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        margin-top: 20%;
+    }
+
+
+    .perfilFoto{
+        width: 25vh;
+        height: 25vh;
+        background-color: #8c8c8c;
+        border-radius: 50%;
+        margin-bottom: 30px;
+        background-position: center;
+        background-image: url(Imagens/img10.jpg);
+        background-size: cover;
+    }
+
+
+    .mensagemTexto {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--textoPrincipal);
+        margin-bottom: 10px;
+    }
+
+
+    .nome {
+        display: flex;
+        flex-direction: column;
+        font-size: 2.8rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 25px;
+    }
+
+
+    .primeiroNome {
+        background: linear-gradient(45deg, #2b57ff, #a04ef6);
+        -webkit-background-clip: text;
+        font-size: 3.5rem;
+        -webkit-text-fill-color: transparent;
+    }
+
+
+    .ultimoNome {
+        color: var(--textoPrincipal);
+    }
+
+
+    .github {
+        height: 5vh;
+        width: 5vh;
+        background: var(--botaoFundo);
+        border: 1px solid var(--bordaClara);
+        border-radius: 53px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 3vh;
+            height: 3vh;
+        }
+    }
+
+
+    .github:hover {
+        background-color: var(--botaoHover);
+        transform: scale(1.05);
+    }
+
+
+    .dropdown {
+        position: relative;
+        display: none;
+        visibility: hidden;
+    }
+
+
+    .dropdownbtn {
+        width: 5vh;
+        height: 5vh;
+        background: var(--botaoFundo);
+        border: 1px solid var(--bordaClara);
+        border-radius: 53px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        transition: all 0.3s ease;
+        img {
+            width: 3vh;
+            height: 3vh;
+        }
+    }
+
+
+    .dropdownbtn:hover {
+        background-color: rgba(168, 85, 247, 0.1);
+        border-color: #717fff;
+    }
+
+
+    .dropdownmenu {
+        position: absolute;
+        top: calc(100% + 8px);
+        right: 0;
+        min-width: 160px;
+        background-color: var(--dropdownFundo);
+        border: 2px solid var(--dropdownBorda);
+        border-radius: 12px;
+        list-style: none;
+        padding: 6px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(8px);
+        transition: all 0.3s ease;
+        z-index: 100;
+    }
+
+
+    .dropdownmenu li a {
+        display: block;
+        padding: 10px 14px;
+        color: var(--textoPrincipal);
+        text-decoration: none;
+        font-size: 0.9rem;
+        border-radius: 8px;
+        transition: all 0.2s ease;
+    }
+
+
+    .dropdownmenu li a:hover {
+        background-color: var(--botaoHover);
+    }
+
+
+    .dropdown:hover .dropdownmenu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+
+    .dropdown:hover .arrow {
+        transform: rotate(180deg);
+    }
+
+
+    #sobremim {
+        width: 100%;
+        display: flex;
+        background-color: var(--cartaoSecundario);
+        margin-top: 30%;
+        border-radius: 30px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+        padding: 7%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    #um {
+        background: linear-gradient(45deg, #2b57ff, #a04ef6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+
+    .codigo {
+        width: 100%;
+        background-color: var(--codigoFundo);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+        margin-top: 10%;
+        margin-bottom: 10%;
+        padding: 14px 18px;
+        font-size: 1.2rem;
+        color: var(--textoSecundario);
+        line-height: 1.5rem;
+    }
+
+
+    #bolinhas {
+        display: flex;
+        gap: 6px;
+        margin-bottom: 10px;
+    }
+
+
+    .bolinha {
+        width: 1.5vh;
+        height: 1.5vh;
+        border-radius: 50%;
+        margin-bottom: 2vh;
+    }
+    #ver { background: #ff5f56; }
+    #ama { background: #ffbd2e; }
+    #ved { background: #27c93f; }
+
+
+    .roxo { color: #986fc5; }
+    .azul { color: #8495e0; }
+    .amarelo { color: #c5aa6f; }
+
+
+    hr {
+        width: 100%;
+        margin-top: 1vh;
+        background: #100cff;
+        border: none;
+        height: 1px;
+    }
+
+    .exp{display: flex;
+        flex-direction: column;
+        align-items: center;
+    gap: 1vh; margin-bottom: 5%;}
+
+    .divExp {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+
+
+    .gradeExp {
+        width: 100%;
+        margin-top: 15%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+
+    .cartaoExp {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--cartaoSecundario);
+        border: 1px solid var(--bordaClara);
+        border-radius: 8px;
+        padding: 2.7vh;
+    }
+
+
+    .ano {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--destaqueAno);
+    }
+
+
+    .status {
+        font-size: 0.75rem;
+        background-color: var(--tagFundo);
+        border: solid 1px var(--tagBorda);
+        padding: 0.4vh 0.8vh;
+        border-radius: 4px;
+        margin: 1vh 0 1.5vh 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: var(--textoPrincipal);
+    }
+
+
+    .lista li {
+        font-size: 0.9rem;
+        color: var(--textoPrincipal);
+        margin-bottom: 1vh;
+        b { color: var(--destaqueAno); }
+    }
+
+
+    #skills {
+        margin-top: 10%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+
+    .habili {
+        color: #100cff;
+        margin-top: 2vh;
+        margin-bottom: 10%;
+        font-size: 25px;
+    }
+
+
+
+
+    .gradeSkills {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        gap: 15px;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .itemSkill {
+        border-radius: 8px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 10px;
+        img {
+            width: 40%;
+            height: 40%;
+        }
+        span {
+            color: #7e7ae6;
+            font-weight: 700;
+            margin-top: 1vh;
+        }
+    }
+
+
+    .itemSoftskill {
+        background-color: var(--cartaoSecundario);
+        border: 1px solid var(--borda);
+        padding: 15px 20px;
+        border-radius: 8px;
+        margin-bottom: 12px;
+        color: var(--textoPrincipal);
+    }
+    .soft {
+        color: #100cff;
+        margin-top: 10%;
+        margin-bottom: 3vh;
+        font-size: 25px;
+    }
+
+.projetos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .listaSoft {
+        margin-bottom: 20%;
+    }
+
+
+    .gradeProjetos {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin-top: 10%;
+    }
+
+
+    .cartaoProjeto {
+        background-color: var(--cartaoSecundario);
+        border: 1px solid var(--borda);
+        border-radius: 8px;
+        overflow: hidden;
+        padding: 20px;
+        color: var(--textoPrincipal);
+    }
+
+
+    .capaProjeto {
+        height: 17.5vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+
+    .capaEchobeats { background-image: url(Imagens/Echo.png); background-size: cover;
+    width: 100%;
+height: 30vh; }
+    .capaEcocirc { background-image: url(Imagens/image\ 2.png); background-size: cover;
+    width: 100%;
+height: 30vh;  }
+    .capaPortfolio { background-image: url(Imagens/image\ 3.png); background-size: cover;
+    width: 100%;
+height: 30vh;  }
+                   
+    .descProjeto {
+        padding-top: 20px;
+    }
+
+
+    .descProjeto h4 {
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+        color: var(--textoPrincipal);
+    }
+
+
+    .descProjeto p {
+        font-size: 1.2rem;
+        color: var(--textoSecundario);
+    }
+
+
+    #contato {
+        display: flex;
+        width: 100%;
+    }
+
+
+    .contato {
+        background: var(--contatoFundo);
+        padding: 3vh 2vh;
+        border-radius: 20px;
+        color: var(--textoPrincipal);
+        margin-top: 20%;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1{font-size: 2.5rem;}
+
+
+    .formCartao {
+        border: 1px solid var(--bordaClara);
+        border-radius: 16px;
+        padding: 1.6vh;
+        margin-top: 5%;
+        background-color: transparent;
+        width: 100%;
+    }
+
+
+    .formContato {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2vh;
+    }
+
+
+    .inputs {
+        background: linear-gradient(180deg, rgba(41, 43, 55, 0.25) 0%, rgba(56, 60, 83, 0.25) 100%);
+        border: 1px solid var(--bordaInput);
+        border-radius: 10px;
+        padding: 1vh 1.4vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .inputs label {
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: var(--textoPrincipal);
+        margin-bottom: 4px;
+    }
+
+
+    .inputs input,
+    .inputs textarea {
+        background: var(--inputFundo);
+        border: none;
+        outline: none;
+        color: var(--textoPrincipal);
+        font-size: 0.95rem;
+        width: 100%;
+        resize: none;
+    }
+
+
+    .btnEnviar {
+        background-color: #f0f0f0;
+        color: #111111;
+        border: none;
+        border-radius: 25px;
+        padding: 1.2vh;
+        font-size: 1.05rem;
+        font-weight: 800;
+        cursor: pointer;
+        margin-top: 5px;
+        transition: background-color 0.2s ease;
+    }
+
+
+    .btnEnviar:hover {
+        background-color: #ffffff;
+    }
+
+
+    .ou {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+
+    .ou::before,
+    .ou::after {
+        content: '';
+        border-bottom: 1px solid var(--divisor);
+    }
+
+
+    .ou span {
+        padding: 0 12px;
+        color: var(--textoSecundario);
+        font-size: 0.85rem;
+        font-weight: 600;
+    }
+
+
+    .listaContato {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+
+    .btnContato {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        background-color: var(--contatoDireto);
+        border: 1px solid var(--divisor);
+        border-radius: 30px;
+        padding: 12px 16px;
+        color: var(--textoPrincipal);
+        text-decoration: none;
+        transition: border-color 0.2s ease, background-color 0.2s ease;
+    }
+
+
+    .btnContato:hover {
+        border-color: #5b51d8;
+        background-color: var(--contatoHover);
+    }
+
+
+
+
+    .btnContato .txtContato {
+        font-size: 0.85rem;
+        font-weight: 700;
+    }
+
+
+    .ladoEsq {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.btnLigth:hover {
+  border-color: #7c5cff;
+  background-color: rgba(124, 92, 255, 0.1);
+}
+
+.btnCurriculo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.8vh 2vh;
+  border: 1px solid var(--bordaClara);
+  background-color: var(--botaoFundo);
+  border-radius: 50px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.btnCurriculo .ponto {
+  width:0.7vh;
+  height: 0.7vh;
+  background-color: #6366f1;
+  border-radius: 50%;
+}
+
+.btnCurriculo:hover {
+  border-color: #7c5cff;
+}
+
+.listaMenu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  border: 1px solid var(--bordaClara);
+  background-color: var(--botaoFundo);
+  border-radius: 50px;
+  padding: 0.1vh;
+  width: 100%  ;
+  justify-content: center;
+}
+
+.lst {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.8vh 2vh;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  display: flex;
+  transition: background-color 0.3s ease;
+}
+
+.lst:hover{ background: linear-gradient(135deg, #6366f1, #8b5cf6);
+transition: background-color 0.3s ease;}
+
+.lst.ativo {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  width: auto;
+}
+
+.separador {
+  width:0.2vh;
+  height: 1.8vh;
+  background-color: var(--bordaClara)
+}
+}
+
+
+
